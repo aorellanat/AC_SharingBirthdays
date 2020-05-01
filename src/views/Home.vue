@@ -47,7 +47,6 @@ export default {
 <style scoped>
 .home {
   width: 100vw;
-  height: 100vh;
   background-image: url('../assets/background.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -57,6 +56,7 @@ export default {
 
 .card {
   margin-top: 5vh;
+  margin-bottom: 10vh;
   background-color: white;
   width: 50vw;
   border-radius: 20px;
