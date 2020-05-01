@@ -8,7 +8,6 @@
         v-model="picker"
         color="teal lighten-2"
       ></v-date-picker>
-      <br>
       <v-btn class="button" color="teal lighten-2" style="color: white">Find your birthday twin!</v-btn>
     </v-container>
   </div>
@@ -28,7 +27,6 @@ export default {
 <style scoped>
 .home {
   width: 100vw;
-  height: 100vh;
   background-image: url('../assets/background.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -38,6 +36,7 @@ export default {
 
 .card {
   margin-top: 5vh;
+  margin-bottom: 10vh;
   background-color: white;
   width: 50vw;
   border-radius: 20px;
