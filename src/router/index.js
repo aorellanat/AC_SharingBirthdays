@@ -9,11 +9,6 @@ Vue.use(VueRouter)
     path: '/',
     name: 'FormBirthday',
     component: FormBirthday
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: () => import('../views/About.vue')
   }
 ]
 
