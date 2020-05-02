@@ -3,8 +3,8 @@
      <v-container class="app-card">
         <p class="mt-7">{{ message }}</p>
         <v-row justify="center">
-          <v-col v-for="character in characters" :key="character.id" xs="12" sm="6" md="4" lg="4">
-            <v-img class="villager-card" contain :src="require(`../assets/images/characters/${character.id}_${character.name}.png`)"></v-img>
+          <v-col v-for="character in characters" :key="character.id" xs="12" sm="6" md="4" lg="3">
+            <v-img contain :src="require(`../assets/images/characters/${character.id}_${character.name}.png`)"></v-img>
           </v-col>
         </v-row>
         <v-btn color="teal lighten-2 mb-7" to="/" dark>Try again!</v-btn>
@@ -73,7 +73,7 @@ export default {
 }
 
 .app-card {
-  width: 50vw;
+  width: 70vw;
   margin-top: 3vh;
   margin-bottom: 10vh;
   background-color: white;
@@ -81,19 +81,4 @@ export default {
   font-family: 'Courier New', Courier, monospace;
 }
 
-.villager-card {
-  width: 25vw;
-  height: 50vh;
-}
-
-@media only screen and (max-width: 1500px) {
-  .card {
-    width: 85vw;
-  }
-
-  .villager-card {
-    width: 90vw;
-    height: 80vh;
-  }
-}
 </style>

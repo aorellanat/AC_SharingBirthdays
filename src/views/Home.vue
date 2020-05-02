@@ -9,7 +9,7 @@
         color="teal lighten-2"
       ></v-date-picker>
       <br>
-      <v-btn class="mb-5" color="teal lighten-2" @click="sendDate()" dark>Find your birthday twin!</v-btn>
+      <v-btn class="my-5" color="teal lighten-2" @click="sendDate()" dark>Find your birthday twin!</v-btn>
     </v-container>
   </div>
 </template>
