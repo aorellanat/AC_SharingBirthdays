@@ -1,14 +1,16 @@
 <template>
   <div class="background">
      <v-container class="app-card">
-        <p class="mt-7">{{ message }}</p>
+        <h3 class="mt-7">{{ message }}</h3>
         <v-row justify="center">
           <v-col v-for="character in characters" :key="character.id" xs="12" sm="6" md="4" lg="3">
             <v-img contain :src="require(`../assets/images/characters/${character.id}_${character.name}.png`)"></v-img>
           </v-col>
         </v-row>
-        <v-btn color="teal lighten-2 mb-7" to="/" dark>Try again!</v-btn>
-        <p>Want to help keep this website running?1 Support us at <a target="_blank" href="https://www.patreon.com/ac_sharing_birthdays">patreon</a></p>
+        <v-btn color="teal lighten-2 mt-5 mb-7" to="/" dark>Try again!</v-btn>
+        <br>
+        <p>Want to help keep this website running? Support us at <strong>patreon</strong></p>
+        <a target="_blank" href="https://www.patreon.com/ac_sharing_birthdays"><v-btn class="patreon-button mb-5"></v-btn></a>        
         <p>Animal Crossing Sharing Birthdays is a fan-made website and is in no way affiliated with Nintendo</p>
     </v-container>
   </div>
@@ -52,11 +54,11 @@ export default {
       });
 
       if (this.characters.length > 1) {
-        this.message = this.date + ' - YOUR BIRTHDAY TWINS ARE:';
+        this.message = this.date + ' - Your birthday twins are:';
       } else if (this.characters.length === 1) {
-        this.message = this.date + ' - YOUR BIRTHDAY TWIN IS:';
+        this.message = this.date + ' - Your birthday twin is:';
       } else {
-        this.message = this.date + ' - YOU HAVE NO BIRTHDAY TWIN :(';
+        this.message = this.date + ' - You have no birthday twin :(';
       }
     }
   }
@@ -73,7 +75,7 @@ export default {
 }
 
 .app-card {
-  width: 70vw;
+  width: 50vw;
   margin-top: 3vh;
   margin-bottom: 10vh;
   background-color: white;
@@ -81,4 +83,19 @@ export default {
   font-family: 'Courier New', Courier, monospace;
 }
 
+.patreon-button {
+  background-image: url('../assets/patron.png');
+  background-size: 100% 100%;
+  width: 10vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .app-card {
+    width: 90vw;
+  }
+
+  .patreon-button {
+    width: 40vw;
+  }
+}
 </style>

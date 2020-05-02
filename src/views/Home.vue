@@ -48,17 +48,6 @@ export default {
   font-family: 'Courier New', Courier, monospace;
 }
 
-@media only screen and (max-width: 1500px) {
-  .card {
-    width: 85vw;
-  }
-
-  .villager-card {
-    width: 90vw;
-    height: 80vh;
-  }
-}
-
 .calendar {
   width: 30vw;
   margin: auto;
@@ -74,12 +63,16 @@ export default {
   margin: auto;
 }
 
-.selector {
-  width: 20vw;
-  margin: auto;
-}
-
 @media only screen and (max-width: 1500px) {
+  .app-card {
+    width: 85vw;
+  }
+  
+  .villager-card {
+    width: 90vw;
+    height: 80vh;
+  }
+  
   .calendar {
     width: 80vw;
   }
