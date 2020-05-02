@@ -1,13 +1,14 @@
 <template>
   <div class="background">
-     <v-container class="card">
-        <p class="title mt-7">{{ message }}</p>
+     <v-container class="app-card">
+        <p class="mt-7">{{ message }}</p>
         <v-row justify="center">
           <v-col v-for="character in characters" :key="character.id" xs="12" sm="6" md="4" lg="4">
             <v-img class="villager-card" contain :src="require(`../assets/images/characters/${character.id}_${character.name}.png`)"></v-img>
           </v-col>
         </v-row>
-        <p>Want to help keep this website running? Support us at <a target="_blank" href="https://www.patreon.com/ac_sharing_birthdays">patreon</a></p>
+        <v-btn color="teal lighten-2 mb-7" to="/" dark>Try again!</v-btn>
+        <p>Want to help keep this website running?1 Support us at <a target="_blank" href="https://www.patreon.com/ac_sharing_birthdays">patreon</a></p>
         <p>Animal Crossing Sharing Birthdays is a fan-made website and is in no way affiliated with Nintendo</p>
     </v-container>
   </div>
@@ -61,3 +62,38 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.background {
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/background.png');
+  background-size: cover;
+  text-align: center;
+}
+
+.app-card {
+  width: 50vw;
+  margin-top: 3vh;
+  margin-bottom: 10vh;
+  background-color: white;
+  border-radius: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.villager-card {
+  width: 25vw;
+  height: 50vh;
+}
+
+@media only screen and (max-width: 1500px) {
+  .card {
+    width: 85vw;
+  }
+
+  .villager-card {
+    width: 90vw;
+    height: 80vh;
+  }
+}
+</style>

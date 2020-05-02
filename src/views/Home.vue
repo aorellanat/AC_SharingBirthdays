@@ -1,6 +1,6 @@
 <template>
   <div class="background">
-    <v-container class="card">
+    <v-container class="app-card">
       <v-img class="logo" src="@/assets/logo.png"></v-img>
       <p>Birthday selector</p>
       <v-date-picker
@@ -30,6 +30,34 @@ export default {
 </script>
 
 <style scoped>
+
+.background {
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/background.png');
+  background-size: cover;
+  text-align: center;
+}
+
+.app-card {
+  width: 50vw;
+  margin-top: 3vh;
+  margin-bottom: 10vh;
+  background-color: white;
+  border-radius: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+@media only screen and (max-width: 1500px) {
+  .card {
+    width: 85vw;
+  }
+
+  .villager-card {
+    width: 90vw;
+    height: 80vh;
+  }
+}
 
 .calendar {
   width: 30vw;
