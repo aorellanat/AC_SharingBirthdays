@@ -4,10 +4,11 @@
         <p class="title mt-7">{{ message }}</p>
         <v-row justify="center">
           <v-col v-for="character in characters" :key="character.id" xs="12" sm="6" md="4" lg="4">
-            <v-img :src="require(`../assets/images/characters/${character.id}_${character.name}.png`)"></v-img>
+            <v-img class="villager-card" contain :src="require(`../assets/images/characters/${character.id}_${character.name}.png`)"></v-img>
           </v-col>
         </v-row>
-        <v-btn class="ma-10" color="teal lighten-2" dark>SHARE WITH THE COMUNITY</v-btn>
+        <p>Want to help keep this website running? Support us at <a target="_blank" href="https://www.patreon.com/ac_sharing_birthdays">patreon</a></p>
+        <p>Animal Crossing Sharing Birthdays is a fan-made website and is in no way affiliated with Nintendo</p>
     </v-container>
   </div>
 </template>
@@ -51,8 +52,10 @@ export default {
 
       if (this.characters.length > 1) {
         this.message = this.date + ' - YOUR BIRTHDAY TWINS ARE:';
+      } else if (this.characters.length === 1) {
+        this.message = this.date + ' - YOUR BIRTHDAY TWIN IS:';
       } else {
-        this.message = this.date + ' - YOUR BIRTHDAY TWINS IS:';
+        this.message = this.date + ' - YOU HAVE NO BIRTHDAY TWIN :(';
       }
     }
   }

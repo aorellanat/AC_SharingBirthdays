@@ -18,10 +18,9 @@ export default {
 <style>
 
 .background {
-  width: 100vw;
+  width: 100%;
+  height: 100%;
   background-image: url('./assets/background.png');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
   text-align: center;
 }
@@ -34,9 +33,19 @@ export default {
   border-radius: 20px;
 }
 
+.villager-card {
+  width: 25vw;
+  height: 50vh;
+}
+
 @media only screen and (max-width: 1500px) {
   .card {
     width: 85vw;
+  }
+
+  .villager-card {
+    width: 90vw;
+    height: 80vh;
   }
 }
 
