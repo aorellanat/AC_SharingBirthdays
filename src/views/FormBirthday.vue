@@ -154,12 +154,16 @@ export default {
   color: white;
   background-color: #00acee;
   padding: 7px;
+  width: 15vw;
+  margin: 0 auto;
 }
 
 .facebook-button {
   color: white;
   background-color: #3b5998;
   padding: 7px;
+  width: 15vw;
+  margin: 0 auto;
 }
 
 
@@ -170,6 +174,10 @@ export default {
 
   .patreon-button {
     width: 40vw;
+  }
+  
+  .facebook-button, .twitter-button {
+    width: 35vw;
   }
 }
 </style>
